@@ -7,7 +7,7 @@ async function ForgotPassword (req, res)  {
     try {
         const isFinded = await User.findOne({ email });
         if (isFinded) {
-            const email_url = `http://localhost:8000/forgot/${isFinded._id}`;
+            const email_url = `https://ecomerce-5it2.onrender.com/forgot/${isFinded._id}`;
             sendForgotEmail(email, email_url);
             res.status(200).json({ msg: "Email send succesfully" });
         }

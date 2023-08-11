@@ -22,7 +22,7 @@ async function Register (req, res) {
             res.status(200).json({ error });
         }
 
-        const email_url = `http://localhost:8000/users/${isCreated.id}/verify/${TokenRes.token}`;
+        const email_url = `https://ecomerce-5it2.onrender.com/users/${isCreated.id}/verify/${TokenRes.token}`;
         sendMail(email, email_url);
 
 
