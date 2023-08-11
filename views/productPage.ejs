@@ -180,7 +180,7 @@
         }
         else if(localStorage.getItem("page") == null)
             localStorage.setItem("page",JSON.stringify(1));
-        fetch(`http://localhost:8000/getProducts/${page}`)
+        fetch(`https://ecomerce-5it2.onrender.com/getProducts/${page}`)
             .then(response => {
                 if (response.status !== 200)
                     throw new Error("Something went wrong")

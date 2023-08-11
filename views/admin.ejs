@@ -217,7 +217,7 @@
 
         <script>
             async function getProducts() {
-                fetch("http://localhost:8000/adminGetProducts")
+                fetch("https://ecomerce-5it2.onrender.com/adminGetProducts")
                     .then(response => {
                         if (response.status !== 200)
                             throw new Error("Something went wrong")
@@ -285,7 +285,7 @@
             }
 
             async function deleteElement(element) {
-                let response = await fetch("http://localhost:8000/deleteProduct", {
+                let response = await fetch("https://ecomerce-5it2.onrender.com/deleteProduct", {
                     method: "POST",
                     mode: "cors",
                     headers: {
@@ -302,7 +302,7 @@
 
             async function updateElement(oldElement, newElement) {
                 const data = { oldElement, newElement }
-                let response = await fetch("http://localhost:8000/updateProduct", {
+                let response = await fetch("https://ecomerce-5it2.onrender.com/updateProduct", {
                     method: "POST",
                     mode: "cors",
                     headers: {
